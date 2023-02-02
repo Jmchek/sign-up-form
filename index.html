@@ -24,38 +24,41 @@
             </div>
             <div class="form">
                 <p>Let's do this!</p>
-                <form action="http://httpbin.org/post" method="post">
+                <form action="http://httpbin.org/post" method="post" id="myform">
                     <div id="col1">
                         <div>
                           <label for="first_name">First Name<br></label>
-                          <input type="text" name="first_name" id="first_name">
+                          <input type="text" name="first_name" id="first_name" required>
                         </div>
                         <div>
                             <label for="email">Email<br></label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                           </div>
                           <div>
                             <label for="password">Password<br></label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" required>
                         </div>
                     </div>
                   
                     <div id="col2">
                         <div>
                           <label for="last_name">Last Name<br></label>
-                          <input type="text" name="last_name" id="last_name">
+                          <input type="text" name="last_name" id="last_name" required>
                         </div>
                         <div>
                             <label for="phone">Phone<br></label>
-                            <input type="tel" name="phone" id="phone">
+                            <input type="tel" name="phone" id="phone" placeholder="Format: 1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                         </div>
                         <div>
                             <label for="confirmpw">Confirm Password<br></label>
-                            <input type="password" name="confirmpw" id="confirmpw">
+                            <input type="password" name="confirmpw" id="confirmpw" required>
                         </div>
                     </div>
             </div>
-            <div class="submit">test</div>
+            <div class="submit">
+                <input type="submit" class="button7" form="myform" value="Create Account">
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>
