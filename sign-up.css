@@ -180,6 +180,20 @@
     border-color: #E5E7EB;
 }
 
+.form .error::after {
+    content: "*Passwords do not match.";
+}
+
+p.hid-err {
+    display:none;
+}
+
+p.unhid-err{
+    all: unset;
+    color: red;
+    font-size: .75rem;
+}
+
 .submit {
     height: 35%;
     width: 100%;
@@ -188,7 +202,6 @@
 
 input.button7 {
     display:inline-block;
-    width: 15%;
     padding:0.7rem 1.7rem;
     margin: 2rem 0.3rem 2rem 50px;
     border-radius:0.5em;

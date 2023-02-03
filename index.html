@@ -37,6 +37,7 @@
                           <div>
                             <label for="password">Password<br></label>
                             <input type="password" name="password" id="password" required>
+                            <p class="hid-err">*Passwords do not match.</p>
                         </div>
                     </div>
                   
@@ -52,6 +53,7 @@
                         <div>
                             <label for="confirmpw">Confirm Password<br></label>
                             <input type="password" name="confirmpw" id="confirmpw" required>
+                            <p class="hid-err">&nbsp;</p>
                         </div>
                     </div>
             </div>
@@ -61,5 +63,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const pw = document.getElementById("password");
+        const pwcm = document.getElementById("confirmpw");
+        const btn = document.querySelector(".button7");
+        const hiderr = document.querySelectorAll(".hid-err");
+        const unhiderr = document.querySelectorAll(".unhid-err");
+        btn.addEventListener('click', () => {
+            if (pw.value != pwcm.value) { 
+                pw.classList.add("error");
+                hiderr.forEach(x => {
+                    x.classList.remove("hid-err");
+                    x.classList.add("unhid-err");
+                }
+                )
+            } else {
+                hiderr.forEach(x => {
+                    x.classList.remove("unhid-err");
+                    x.classList.add("hid-err");
+                })
+            }
+            });
+    </script>
 </body>
 </html>
