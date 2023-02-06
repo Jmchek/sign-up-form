@@ -103,7 +103,7 @@
 
 .form {
     background-color: white;
-    height: 30%;
+    height: 25%;
     width: 100%;
     display: flex;
     flex-flow: column wrap;
@@ -122,8 +122,7 @@
 .form form {
     display: flex;
     flex-flow: row nowrap;
-    height: 80%;
-    width: 40%;
+    width: 30%;
     text-transform: uppercase;
     gap: 80px;
     padding-left: 50px;
@@ -195,7 +194,7 @@ p.unhid-err{
 }
 
 .submit {
-    height: 35%;
+    height: 40%;
     width: 100%;
     background-color: rgb(245, 240, 240);
 }
